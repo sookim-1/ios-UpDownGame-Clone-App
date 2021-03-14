@@ -114,7 +114,11 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="maximumValueLabel" destination="cSz-sd-dAa" id="phH-mt-fRv"/>
+                        <outlet property="minimumValueLabel" destination="09v-ea-QdI" id="R00-nx-lNz"/>
                         <outlet property="slider" destination="Gxm-x1-5L7" id="7gP-9J-Hlf"/>
+                        <outlet property="sliderValueLabel" destination="o34-0z-uCq" id="2Rw-Gc-s54"/>
+                        <outlet property="tryCountLabel" destination="huc-2p-SVr" id="F2t-jU-pRg"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
