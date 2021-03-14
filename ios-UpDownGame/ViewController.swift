@@ -47,7 +47,7 @@ class ViewController: UIViewController {
         slider.value = Float(hitValue)
         
         tryCount = tryCount + 1
-        tryCountLabel.text = "\(tryCount) + / 5"
+        tryCountLabel.text = "\(tryCount) / 5"
         
         if randomValue == hitValue {
             showAlert(message: "YOU HIT!!")
