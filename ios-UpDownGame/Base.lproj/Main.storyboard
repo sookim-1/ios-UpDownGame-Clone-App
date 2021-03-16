@@ -74,6 +74,9 @@
                                         <fontDescription key="fontDescription" style="UICTFontTextStyleTitle3"/>
                                     </preferredSymbolConfiguration>
                                 </state>
+                                <connections>
+                                    <segue destination="4Ph-vH-zE0" kind="presentation" modalTransitionStyle="crossDissolve" id="V8r-wg-znA"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="afa-7X-E82">
                                 <rect key="frame" x="804" y="28" width="28" height="25"/>
@@ -133,9 +136,26 @@
                         <rect key="frame" x="0.0" y="0.0" width="896" height="414"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="9Qv-EJ-NEa">
-                                <rect key="frame" x="265" y="20" width="571" height="333"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="yagom_symbol" translatesAutoresizingMaskIntoConstraints="NO" id="y4n-db-VnS">
+                                <rect key="frame" x="64" y="107" width="200" height="200"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="olM-V1-INM"/>
+                                    <constraint firstAttribute="height" constant="200" id="zUf-KC-o6V"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Srb-L0-mxc">
+                                <rect key="frame" x="64" y="20" width="59" height="44.5"/>
+                                <state key="normal" image="xmark.rectangle" catalog="system">
+                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="font" scale="large">
+                                        <fontDescription key="fontDescription" style="UICTFontTextStyleTitle0"/>
+                                    </preferredSymbolConfiguration>
+                                </state>
+                                <connections>
+                                    <action selector="touchUpDismissButton:" destination="4Ph-vH-zE0" eventType="touchUpInside" id="ytb-x1-snH"/>
+                                </connections>
+                            </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="9Qv-EJ-NEa">
+                                <rect key="frame" x="284" y="20" width="548" height="353"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <string key="text">Hello World!
 
@@ -144,29 +164,25 @@ i am sookim!
 My Contacts:
 https://Sookim18.github.io
 scstnghks@naver.com
-
 </string>
                                 <color key="textColor" systemColor="labelColor"/>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                 <dataDetectorType key="dataDetectorTypes" link="YES" address="YES"/>
                             </textView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Srb-L0-mxc">
-                                <rect key="frame" x="60" y="20" width="59" height="45"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" image="xmark.rectangle" catalog="system">
-                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="font" scale="large">
-                                        <fontDescription key="fontDescription" style="UICTFontTextStyleTitle0"/>
-                                    </preferredSymbolConfiguration>
-                                </state>
-                            </button>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="yagom_symbol" translatesAutoresizingMaskIntoConstraints="NO" id="y4n-db-VnS">
-                                <rect key="frame" x="60" y="122" width="153" height="129"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="PQH-ZI-eMG"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="9Qv-EJ-NEa" firstAttribute="top" secondItem="PQH-ZI-eMG" secondAttribute="top" constant="20" id="5uB-i8-Dcm"/>
+                            <constraint firstItem="PQH-ZI-eMG" firstAttribute="bottom" secondItem="9Qv-EJ-NEa" secondAttribute="bottom" constant="20" id="CSJ-GH-q2Y"/>
+                            <constraint firstItem="Srb-L0-mxc" firstAttribute="top" secondItem="PQH-ZI-eMG" secondAttribute="top" constant="20" id="G91-RH-1pL"/>
+                            <constraint firstItem="Srb-L0-mxc" firstAttribute="leading" secondItem="PQH-ZI-eMG" secondAttribute="leading" constant="20" id="J27-Ob-Caj"/>
+                            <constraint firstItem="y4n-db-VnS" firstAttribute="leading" secondItem="Srb-L0-mxc" secondAttribute="leading" id="TXh-Q2-0Z5"/>
+                            <constraint firstItem="9Qv-EJ-NEa" firstAttribute="leading" secondItem="y4n-db-VnS" secondAttribute="trailing" constant="20" id="XTj-Eu-aQh"/>
+                            <constraint firstItem="y4n-db-VnS" firstAttribute="centerY" secondItem="mDy-Je-ubm" secondAttribute="centerY" id="ZUf-hh-uEI"/>
+                            <constraint firstItem="PQH-ZI-eMG" firstAttribute="trailing" secondItem="9Qv-EJ-NEa" secondAttribute="trailing" constant="20" id="gdQ-pE-qAI"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wqx-lP-uYU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
